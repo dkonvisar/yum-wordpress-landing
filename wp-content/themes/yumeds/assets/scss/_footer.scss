@@ -1,0 +1,111 @@
+.footer {
+    padding: 65px 0 30px;
+    margin-top: auto;
+    color: #FBFBFB;
+    background-color: #2E67FF;
+    @media screen and (min-width: 1024px) {
+        padding: 90px 0 50px;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 30px;
+        flex-direction: column;
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+            padding-bottom: 10px;
+        }
+
+        > div {
+            margin: 5px 0;
+            @media screen and (min-width: 1024px) {
+                margin: 10px 0;
+            }
+        }
+
+
+    }
+
+    &__logo {
+        > img {
+            display: block;
+            @media screen and (max-width: 639px) {
+                max-width: 110px;
+            }
+        }
+    }
+
+    &__bottom {
+        padding-top: 15px;
+        border-top: 1px solid #fff;
+        @media screen and (min-width: 1024px) {
+            padding-top: 25px;
+        }
+    }
+
+    &__socials {
+        a {
+            display: inline-block;
+            padding: 0 10px;
+            opacity: 1;
+            border: none;
+            transition: opacity .3s ease-in;
+
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
+
+    &__copyright {
+        p, span, ul, li {
+            font-size: 18px;
+        }
+    }
+}
+
+.footer-menu {
+    margin: 0 -12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+    }
+
+    > li {
+        > a {
+            display: flex;
+            margin: 6px 12px;
+            text-align: center;
+            color: #FBFBFB;
+            font-size: 18px;
+            line-height: 1.6;
+            letter-spacing: .25px;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+                border-bottom: 1px solid #FBFBFB;
+            }
+        }
+    }
+}
+
+.email-item {
+    a {
+        display: flex;
+        align-items: center;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 22px;
+            height: 15px;
+            margin-right: 10px;
+            background: url("../images/email.svg") 50% no-repeat;
+        }
+    }
+}

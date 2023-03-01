@@ -1,0 +1,48 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+* {
+    box-sizing: inherit;
+    outline-color: $purple;
+
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+    background: $background;
+}
+
+main {
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

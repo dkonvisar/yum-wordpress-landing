@@ -1,0 +1,60 @@
+/*How Section*/
+.how {
+    padding: 50px 0 25px;
+    z-index: 1;
+    @media screen and (min-width: 1024px) {
+        padding: 80px 0 120px;
+    }
+
+    &__boxes {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        @media screen and (min-width: 1024px) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__box {
+        flex: 0 1 400px;
+        margin: 10px 0;
+        padding: 30px 20px;
+        border-radius: 10px;
+        @media screen and (min-width: 640px) {
+            margin: 10px;
+            padding: 40px;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #fff;
+        box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.15);
+        @media screen and (min-width: 640px) {
+            padding: 0;
+            width: 64px;
+            height: 64px;
+        }
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 35px;
+        }
+    }
+    &__text {
+        h3, h4, h5 {
+            margin-bottom: 10px;
+        }
+    }
+    &__img {
+        img {
+            width: 100%;
+            border-radius: 9px 9px 9px 0;
+            box-shadow: 0 4px 9px 0 rgba(70,93,154,0.06);
+        }
+    }
+}

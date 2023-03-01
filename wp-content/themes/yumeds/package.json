@@ -1,0 +1,15 @@
+{
+  "name": "yumeds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node-sass --watch assets/scss -o assets/css --source-map true --output-style compressed"
+  },
+  "author": "Denis K.",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

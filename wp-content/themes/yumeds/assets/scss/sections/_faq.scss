@@ -1,0 +1,42 @@
+/*FAQ Section*/
+.faq {
+    padding: 30px 0 55px;
+    @media screen and (min-width: 1024px) {
+        padding: 80px 0;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__left {
+        flex: 0 0 100%;
+        text-align: center;
+        @media screen and (min-width: 1024px) {
+            flex: 0 0 45%;
+            padding-right: 40px;
+            text-align: left;
+        }
+
+        img {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__right {
+        flex: 0 0 100%;
+        @media screen and (min-width: 1024px) {
+            flex: 0 0 55%;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 25px;
+        text-align: center;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 50px;
+            text-align: left;
+        }
+    }
+}

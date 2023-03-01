@@ -1,0 +1,99 @@
+@mixin h1 {
+    font-size: 30px;
+    line-height: 1.1;
+    font-weight: 700;
+    @media screen and (min-width: 1024px) {
+        font-size: 48px;
+    }
+}
+
+@mixin h2 {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 800;
+    @media screen and (min-width: 1024px) {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+}
+
+@mixin h3 {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 800;
+    @media screen and (min-width: 1024px) {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+}
+
+@mixin h4 {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 800;
+    @media screen and (min-width: 1024px) {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+}
+
+@mixin body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: .25px;
+    @media screen and (min-width: 1024px) {
+        font-size: 18px;
+        line-height: 1.33;
+    }
+}
+
+@mixin container {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@mixin button {
+    display: inline-block;
+    padding: 12px 20px;
+    text-align: center;
+    font: 800 12px/14px $sub-font;
+    letter-spacing: .5px;
+    color: #fff;
+    background-color: $blue;
+    border: 1px solid $blue;
+    border-radius: 50px;
+    transition: color .2s ease-in,
+    background-color .2s ease-in,
+    border .2s ease-in;
+    @media screen and (min-width: 1024px) {
+        font-size: 15px;
+        padding: 16px 30px;
+    }
+    &:hover,
+    &:focus {
+        color: $blue;
+        border-color: $blue;
+        background-color: #fff;
+    }
+}
+
+@mixin button--secondary {
+    color: $blue;
+    border-color: $blue;
+    background-color: #fff;
+    &:hover,
+    &:focus {
+        color: #fff;
+        border-color: $blue;
+        background-color: $blue;
+    }
+}
+
+@function vw($pixels, $context: 1440px) {
+    @return #{($pixels/$context)* 100}vw
+}
+
+@function vw_m($pixels, $context: 375px) {
+    @return #{($pixels/$context)* 100}vw
+}

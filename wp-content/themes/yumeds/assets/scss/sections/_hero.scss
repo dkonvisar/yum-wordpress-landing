@@ -1,0 +1,119 @@
+/*Hero Section*/
+.hero {
+    color: #fff;
+    padding-top: 105px;
+    text-align: center;
+    border-radius: 0 0 25px 25px;
+    background: 50% / cover no-repeat $blue;
+    overflow: hidden;
+    z-index: 8;
+    @media screen and (min-width: 1024px) {
+        padding-top: 170px;
+        border-radius: 0 0 50px 50px;
+    }
+
+    *:not(.button--secondary) {
+        color: inherit;
+    }
+
+    @media screen and (min-width: 1024px) {
+        text-align: left;
+    }
+
+    h1, h2 {
+        margin: 0;
+    }
+
+    p, span, ul, ol {
+        font-weight: 500;
+    }
+
+    img {
+        display: block;
+    }
+
+    .container--small {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        max-width: 1190px;
+        @media screen and (min-width: 1024px) { //768
+            flex-direction: row;
+        }
+    }
+
+    &__left {
+        flex: 0 0 50%;
+        @media screen and (min-width: 1024px) {
+            //768
+            align-self: flex-end;
+            padding-right: 40px;
+            //1024
+            position: relative;
+            flex: 0 0 45%;
+            min-height: 615px;
+        }
+        img:not(.no-video) {
+            @media screen and (min-width: 1024px) {
+                display: none;
+            }
+        }
+        video {
+            display: none;
+            @media screen and (min-width: 1024px) {
+                position: absolute;
+                bottom: -165px;
+                display: block;
+                max-width: 365px;
+                border: 10px solid #EDEDED;
+                border-radius: 35px;
+            }
+        }
+    }
+
+    &__right {
+        flex: 0 0 55%;
+    }
+
+    &__text {
+        @media screen and (min-width: 1280px) {
+            padding-right: 55px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 25px -8px;
+        @media screen and (min-width: 1024px) {
+            justify-content: flex-start;
+            margin-top: 55px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .button {
+        margin: 8px;
+        border-color: #fff;
+        background-color: transparent;
+
+        &:hover,
+        &:focus {
+            color: $blue;
+            border-color: $blue;
+            background-color: #fff;
+        }
+
+        &--secondary {
+            background-color: #fff;
+
+            &:hover,
+            &:focus {
+                color: #fff;
+                border-color: #fff;
+                background-color: transparent;
+            }
+        }
+    }
+}

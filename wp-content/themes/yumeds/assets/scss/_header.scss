@@ -1,0 +1,125 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+    padding: 10px 20px;
+    border-radius: 0 0 10px 10px;
+    background-color: #fff;
+    z-index: 10;
+
+    .admin-bar & {
+        top: 46px;
+        @media screen and (min-width: 783px) {
+            top: 32px;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin: 20px 20px 0;
+        padding: 16px 20px;
+        justify-content: space-between;
+        border-radius: 50px;
+        box-shadow: 0 -35px 0 10px $blue;
+    }
+
+    &__button {
+        margin-left: auto;
+        @media screen and (min-width: 1024px) {
+            margin-left: 0;
+        }
+    }
+
+    &.shadow {
+        box-shadow: 0px -10px 25px 10px rgba(220, 220, 220, 1);
+    }
+
+    &.blue {
+        color: #fff;
+        background-color: $blue;
+        box-shadow: none;
+        transition: box-shadow .15s ease-in;
+
+        li > a {
+            color: #fff;
+
+            &:hover,
+            &:focus {
+                border-bottom-color: #fff;
+            }
+        }
+
+        &.shadow {
+            @media screen and (min-width: 1024px) {
+                box-shadow: 0px -10px 25px 10px rgba(220, 220, 220, 1);
+            }
+        }
+
+        .button {
+            @include button--secondary;
+
+            &:hover,
+            &:focus {
+                border-color: #fff;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+
+        }
+    }
+
+    &__logo {
+        a {
+            display: flex;
+            margin-left: 5px;
+            border-bottom: none;
+
+            picture {
+                display: flex;
+            }
+
+            img {
+                max-width: 105px;
+                transition: opacity .3s ease-in;
+                @media screen and (min-width: 1024px) {
+                    max-width: 160px;
+                }
+            }
+
+            @media screen and (min-width: 375px) {
+                margin-left: 20px;
+            }
+            @media screen and (min-width: 1024px) {
+                margin-left: 0;
+            }
+
+            &:hover {
+                img {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
+
+.header-menu {
+    display: flex;
+
+    > li {
+        > a {
+            margin: 0 16px;
+            color: $heading;
+            line-height: 1;
+            letter-spacing: .4px;
+
+            &:hover,
+            &:focus {
+                border-bottom-color: $heading;
+            }
+        }
+    }
+}

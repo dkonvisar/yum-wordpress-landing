@@ -1,0 +1,31 @@
+.page-content {
+    position: relative;
+    padding: 110px 0 25px;
+    background: $gradient;
+    margin-bottom: -25px;
+    border-radius: 0 0 25px 25px;
+    @media screen and (min-width: 1024px) {
+        margin-bottom: -50px;
+        padding: 180px 0 80px;
+        border-radius: 0 0 50px 50px;
+    }
+
+    .container {
+        max-width: 750px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
+
+.not-found {
+    height: 80vh;
+    text-align: center;
+    h1 {
+        color: $blue;
+    }
+    .container {
+        padding-top: 100px;
+    }
+}

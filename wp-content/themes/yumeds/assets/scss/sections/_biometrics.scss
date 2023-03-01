@@ -1,0 +1,62 @@
+/*Biometrics Section*/
+.biometrics {
+    padding-top: 75px;
+    background: $gradient;
+    scroll-margin-top: 25px;
+    scroll-snap-margin-top: 25px;
+    overflow: hidden;
+    @media screen and (min-width: 1024px) {
+        padding-top: 50px;
+        scroll-margin-top: 50px;
+        scroll-snap-margin-top: 50px;
+    }
+    .container--small {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 1060px;
+    }
+    &__left {
+        flex: 0 0 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        @media screen and (min-width: 1024px) {
+            flex: 0 0 50%;
+            text-align: left;
+            margin-bottom: 0;
+        }
+        @media screen and (min-width: 1440px) {
+            flex: 0 0 47%;
+            text-align: left;
+        }
+        .button {
+            margin-top: 20px;
+            @media screen and (max-width: 1023px) {
+                display: none;
+            }
+        }
+        p, span, ul, ol {
+            color: $paragraph;
+        }
+    }
+    &__right {
+        flex: 0 0 100%;
+        align-self: flex-end;
+        @media screen and (min-width: 1024px) {
+            flex: 0 0 50%;
+            padding-top: 70px;
+        }
+        img {
+            display: block;
+            margin: 0 auto -60px;
+            max-width: 230px;
+            border-radius: 27px 27px 0 0;
+            box-shadow: 2px 0 17px 0 rgba(0,0,0,0.25);
+            @media screen and (min-width: 1024px) {
+                margin: 0 0 0 auto;
+                max-width: 410px;
+                border-radius: 35px 35px 0 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,148 @@
+/*Signup Section*/
+.signup {
+    margin-bottom: -25px;
+    padding-top: 45px;
+    border-radius: 25px;
+    background-color: $background;
+    @media screen and (min-width: 1024px) {
+        margin-bottom: -50px;
+        padding-top: 0;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__left {
+        flex: 0 0 100%;
+        @media screen and (min-width: 1024px) {
+            flex: 0 0 50%;
+        }
+    }
+
+    &__right {
+        flex: 0 0 100%;
+        align-self: flex-end;
+        @media screen and (min-width: 1024px) {
+            flex: 0 0 50%;
+            padding-top: 45px;
+            padding-left: 40px;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            @media screen and (min-width: 1024px) {
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__heading {
+        margin-bottom: 30px;
+        text-align: center;
+        @media screen and (min-width: 1024px) {
+            text-align: left;
+        }
+        h2, h3 {
+            margin: 0;
+        }
+        p, span, ul, ol {
+            color: $paragraph;
+        }
+    }
+
+    &__form {
+        margin-bottom: 60px;
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 0;
+        }
+    }
+
+    .success {
+        text-align: center;
+        color: #00BC37;
+        @media screen and (min-width: 640px) {
+            text-align: left;
+        }
+        @media screen and (min-width: 1280px) {
+            position: absolute;
+        }
+    }
+}
+
+.subscribe-form {
+    position: relative;
+    margin: 0;
+    @media screen and (max-width: 639px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input[type=text], input[type=email] {
+        display: block;
+        margin-bottom: 10px;
+        padding: 18px 35px;
+        width: 100%;
+        font-size: 15px;
+        line-height: 1.2;
+        border: 1px solid #fff;
+        border-radius: 40px;
+        @media screen and (min-width: 640px) {
+            padding: 24px 180px 18px 35px;
+        }
+        @media screen and (min-width: 1024px) {
+            padding-right: 220px;
+            font-size: 20px;
+            line-height: 1.4;
+        }
+        & + span {
+            position: absolute;
+        }
+    }
+
+    input[type=submit] {
+        @include button;
+        margin: 0 !important;
+        cursor: pointer;
+        @media screen and (max-width: 639px) {
+            font-size: 15px;
+            padding: 18px 30px;
+            height: 52px;
+        }
+        @media screen and (min-width: 640px) {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+// Contact Form 7 adjustment
+.wpcf7-spinner {
+    display: none;
+}
+
+.wpcf7-not-valid-tip {
+    display: none;
+}
+
+.wpcf7-response-output {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 !important;
+    width: 100%;
+    @media screen and (max-width: 639px) {
+        top: 130px;
+    }
+}
+

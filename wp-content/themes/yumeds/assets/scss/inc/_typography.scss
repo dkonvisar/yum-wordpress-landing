@@ -1,0 +1,76 @@
+body {
+    font-family: $font;
+    @include body;
+    color: $body;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6  {
+    font-family: $sub-font;
+    color: $heading;
+}
+
+h1, .h1 {
+    @include h1;
+}
+
+h2, .h2 {
+    @include h2;
+    margin: 0 0 20px;
+}
+
+h3, .h3 {
+    @include h3;
+}
+
+h4, .h4 {
+    @include h3;
+}
+
+h5, .h5 {
+    @include h4;
+}
+
+h6, .h6 {
+    @include h4;
+}
+
+p {
+    margin: 22px 0;
+    &:empty {
+        display: none;
+    }
+}
+
+small {
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+a {
+    color: $blue;
+    border-bottom: 1px solid transparent;
+    transition: border-color .2s ease-in-out;
+    &:hover, &:focus {
+        border-color: $blue;
+    }
+}
+
+.button {
+    @include button;
+    &--secondary {
+        @include button--secondary;
+    }
+    &--large {
+        font-size: 14px;
+        padding: 18px 30px;
+        min-width: 275px;
+        @media screen and (min-width: 1024px) {
+            font-size: 19px;
+            padding: 22px 30px;
+            min-width: 250px;
+        }
+    }
+}
+

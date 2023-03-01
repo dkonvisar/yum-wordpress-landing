@@ -1,0 +1,139 @@
+/*General*/
+.container {
+    @include container;
+    max-width: 1290px;
+    .container {
+        padding: 0;
+    }
+    &--small {
+        @include container;
+        max-width: 1130px;
+    }
+}
+
+section {
+    position: relative;
+    scroll-margin-top: 50px;
+    scroll-snap-margin-top: 50px;
+    @media screen and (min-width: 1024px) {
+        scroll-margin-top: 100px;
+        scroll-snap-margin-top: 100px;
+    }
+}
+
+.section {
+    margin-top: -25px;
+    border-radius: 0 0 25px 25px;
+    @media screen and (min-width: 1024px) {
+        margin-top: -50px;
+        border-radius: 0 0 50px 50px;
+    }
+}
+
+.menu {
+    margin: 0;
+    padding-left: 0;
+}
+
+.heading {
+    margin: 0 auto 40px;
+    max-width: 680px;
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 60px;
+    }
+}
+
+.button-wrapper {
+    margin-top: 25px;
+    text-align: center;
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}
+
+/*Color Classes*/
+.mint {
+    &.color-bg,
+    .color-bg {
+        background-color: #55E0AE1A;
+    }
+
+    svg {
+        fill: $mint;
+        stroke: $mint;
+    }
+
+    h3, h4, h5, h6, p, span {
+        color: $mint;
+    }
+}
+
+.blue {
+    &.color-bg,
+    .color-bg {
+        background-color: #2E67FF1A;
+    }
+
+    svg {
+        fill: $blue;
+        stroke: $blue;
+    }
+
+    h3, h4, h5, h6, p, span {
+        color: $blue;
+    }
+}
+
+.purple {
+    &.color-bg,
+    .color-bg {
+        background-color: #F6F5FF;
+    }
+
+    svg {
+        fill: $purple;
+        stroke: $purple;
+    }
+
+    h3, h4, h5, h6, p, span {
+        color: $purple;
+    }
+}
+
+.fire {
+    &.color-bg,
+    .color-bg {
+        background-color: #FF76761A;
+    }
+
+    svg {
+        fill: $fire;
+        stroke: $fire;
+    }
+
+    h3, h4, h5, h6, p, span {
+        color: $fire;
+    }
+}
+
+.honey {
+    &.color-bg,
+    .color-bg {
+        background-color: #EEAC571A;
+    }
+
+    svg {
+        fill: $honey;
+        stroke: $honey;
+    }
+
+    h3, h4, h5, h6, p, span {
+        color: $honey;
+    }
+}
+
+.color-bg {
+    svg {
+        max-width: 38px
+    }
+}
