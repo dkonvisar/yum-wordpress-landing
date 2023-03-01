@@ -5,13 +5,14 @@
 
 # # Recursively allow files under:
 # "mu-plugins", "plugins", "themes" directory
-!/wp-content/mu-plugins/**
 !/wp-content/plugins/**
 !/wp-content/themes/**
 !/wp-content/uploads/**
 
 # ignore this file
-wp-content/themes/index.php
+/wp-content/themes/index.php
+/wp-content/uploads/wpcf7_uploads
+/wp-content/mu-plugins
 
 # ignore specific themes
 wp-content/themes/twenty*/
